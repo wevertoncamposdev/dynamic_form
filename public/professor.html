@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TECH — Área do Professor</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<nav class="navbar">
+  <a class="brand" href="/">TE<span>CH</span></a>
+  <div class="links"><a class="active" href="/professor.html">Área do professor</a></div>
+</nav>
+<main>
+  <section class="teacher-intro">
+    <div class="eyebrow">Painel privado</div>
+    <h1>Respostas da turma</h1>
+    <p class="lead">Consulte os envios, confira a integridade dos arquivos e acompanhe os resultados.</p>
+  </section>
+  <section id="login-panel" class="teacher-login">
+    <div class="teacher-login-mark">T</div>
+    <div><h2>Entrar como professor</h2><p class="section-sub">A senha é definida no arquivo <code>.env</code> do servidor.</p></div>
+    <form id="login-form">
+      <label for="senha">Senha do professor</label>
+      <div class="login-row"><input id="senha" name="senha" type="password" autocomplete="current-password" required /><button class="btn btn-primary" type="submit">Acessar</button></div>
+    </form>
+    <div id="login-alerta"></div>
+  </section>
+  <section id="dashboard" class="teacher-dashboard" hidden>
+    <div class="dashboard-toolbar"><div><div class="eyebrow">Visão da coleta</div><h2 id="dashboard-title">Formulários</h2></div><button id="logout-button" class="btn btn-outline" type="button">Sair</button></div>
+    <div class="teacher-tabs" role="tablist"><button class="teacher-tab active" data-form="avaliacao" role="tab">Avaliação</button><button class="teacher-tab" data-form="pesquisa" role="tab">Pesquisa</button></div>
+    <div id="report-alerta"></div><div id="report-content"></div>
+  </section>
+</main>
+<footer>TECH — Área reservada ao professor</footer>
+<script src="/js/professor.js"></script>
+</body>
+</html>

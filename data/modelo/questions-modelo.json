@@ -1,0 +1,30 @@
+{
+  "titulo": "Modelo — Compreensão do Framework TECH",
+  "descricao": "Este formulário verifica o quanto você compreendeu sobre o framework TECH (Technological Competency for Humans) apresentado na página inicial.",
+  "questoes": [
+    {
+      "id": "a1",
+      "tipo": "multipla_escolha",
+      "pergunta": "O que significa a sigla TECH?",
+      "opcoes": [
+        "Technology for Everyone's Complete Habilitation",
+        "Technological Competency for Humans",
+        "Technical Course for Higher-education",
+        "Total Education in Computing and Hardware"
+      ],
+      "resposta_correta": 1
+    },
+    {
+      "id": "a2",
+      "tipo": "multipla_escolha",
+      "pergunta": "Segundo o TECH, qual é a principal diferença entre 'ferramenta' e 'competência'?",
+      "opcoes": [
+        "Não existe diferença, são sinônimos",
+        "Ferramenta é o objetivo final; competência é apenas o meio",
+        "Ferramentas são meios que podem mudar; competências são o objetivo, o que permanece",
+        "Competência é aprender a usar um único programa específico"
+      ],
+      "resposta_correta": 2
+    }
+  ]
+}

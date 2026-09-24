@@ -1,0 +1,770 @@
+[
+  {
+    "id": "a35a2143-9f4f-43e8-b8c3-38621e97dc00",
+    "enviadoEm": "2026-08-20T12:33:33.117Z",
+    "identificacao": {
+      "nome": "teste",
+      "idade": 14,
+      "serie": "8° Ano",
+      "turma": null
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 3,
+      "a9": 3,
+      "a10": 3,
+      "a11": "teste",
+      "a12": "teste"
+    }
+  },
+  {
+    "id": "66064e6a-457e-4015-9a98-79ebd08c8310",
+    "enviadoEm": "2026-08-25T16:49:53.165Z",
+    "identificacao": {
+      "nome": "ana gabriella do santos",
+      "idade": 13,
+      "serie": "8b",
+      "turma": null
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 0,
+      "a6": 3,
+      "a7": 1,
+      "a8": 3,
+      "a9": 1,
+      "a10": 1,
+      "a11": "Competência tecnológica é a capacidade de compreender, utilizar, criar e avaliar tecnologias de forma crítica, ética e autônoma, integrando conhecimentos, habilidades e atitudes para atuar de forma eficaz na sociedade e no ambiente digital.",
+      "a12": "Uma das 10 dimensões da inovação de Keeley é o Serviço (Service), que envolve aprimorar o suporte e a experiência do cliente, incluindo novos serviços, melhores canais de atendimento ou personalização."
+    }
+  },
+  {
+    "id": "b5fafe94-a1b4-4ad9-b724-24adeabd20b2",
+    "enviadoEm": "2026-08-25T16:53:45.889Z",
+    "identificacao": {
+      "nome": "AYSHA BEATRIZ DA SILVA REZENDE",
+      "idade": 13,
+      "serie": "7°",
+      "turma": "7B"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 2,
+      "a3": 1,
+      "a4": 0,
+      "a5": 0,
+      "a6": 2,
+      "a7": 2,
+      "a8": 0,
+      "a9": 1,
+      "a10": 0,
+      "a11": "QUANDO VOCÊ TEM UMA CERTA ESPECIALIDADE NA TECNOLOGIA.",
+      "a12": "D4:EU USO MUITO AS INFORMAÇÕES PARA MINHA VIDA."
+    }
+  },
+  {
+    "id": "f4c6e432-8b62-46b8-816a-afd6bc77adec",
+    "enviadoEm": "2026-08-25T16:56:20.202Z",
+    "identificacao": {
+      "nome": "octavio henrique fabel",
+      "idade": 16,
+      "serie": "9",
+      "turma": "ciclo2 tarde"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 1,
+      "a3": 1,
+      "a4": 3,
+      "a5": 2,
+      "a6": 0,
+      "a7": 2,
+      "a8": 1,
+      "a9": 0,
+      "a10": 3,
+      "a11": "ser copetente influencia MUITO NA TECNOLOGIA",
+      "a12": "ISSO PRA MIM NAO FAZ SENTIDO PORQUE EU QUASE NAO USO O CONPUTADOR"
+    }
+  },
+  {
+    "id": "15f95a28-65ef-4114-af72-796aee9011ad",
+    "enviadoEm": "2026-08-25T16:56:43.924Z",
+    "identificacao": {
+      "nome": "victor hugo da cruz farias",
+      "idade": 14,
+      "serie": "8",
+      "turma": "8b"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 1,
+      "a5": 2,
+      "a6": 0,
+      "a7": 2,
+      "a8": 0,
+      "a9": 1,
+      "a10": 1,
+      "a11": "não e apenas usar internet",
+      "a12": "d7"
+    }
+  },
+  {
+    "id": "ab01be92-a360-4887-8c21-631460cde9c9",
+    "enviadoEm": "2026-08-25T16:57:52.531Z",
+    "identificacao": {
+      "nome": "maria julia boldrim de araujo",
+      "idade": 14,
+      "serie": "8a",
+      "turma": "8a"
+    },
+    "respostas": {
+      "a1": 3,
+      "a2": 2,
+      "a3": 1,
+      "a4": 0,
+      "a5": 0,
+      "a6": 2,
+      "a7": 3,
+      "a8": 0,
+      "a9": 2,
+      "a10": 3,
+      "a11": "'Competência tecnológica' segundo o TECH refere-se ao conjunto de habilidades, conhecimentos e atitudes necessários para utilizar tecnologias digitais de forma eficaz, crítica e éticas.",
+      "a12": "Uma das 10 dimensões da inovação de Keeley é o Serviço (Service), que envolve aprimorar o suporte e a experiência do cliente, incluindo novos serviços, melhores canais de atendimento ou personalização."
+    }
+  },
+  {
+    "id": "da3a4ced-ba48-46a7-bff2-a76eefe94da0",
+    "enviadoEm": "2026-08-25T16:58:54.669Z",
+    "identificacao": {
+      "nome": "danil morais de mattos",
+      "idade": 12,
+      "serie": "6°C",
+      "turma": "C"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 0,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 3,
+      "a9": 2,
+      "a10": 0,
+      "a11": "eu sei quase tudo sobre a tecnológia",
+      "a12": "nao sein"
+    }
+  },
+  {
+    "id": "c9bf2f7b-3759-4b97-b2c6-9a849aa42d24",
+    "enviadoEm": "2026-08-25T16:59:14.775Z",
+    "identificacao": {
+      "nome": "Luiz Otávio Basso Alves",
+      "idade": 13,
+      "serie": "8º",
+      "turma": "8°A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 1,
+      "a3": 1,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 1,
+      "a9": 1,
+      "a10": 1,
+      "a11": "Toda pessoa com a oportunidade de compreender, utilizar, criar, avaliar e transformar tecnologias de maneira autônoma, crítica, criativa, ética e produtiva.",
+      "a12": ""
+    }
+  },
+  {
+    "id": "fe647364-4c19-49b9-a571-2bf4237815e8",
+    "enviadoEm": "2026-08-25T16:59:35.081Z",
+    "identificacao": {
+      "nome": "Davi Lucas Nascimento de Jesus",
+      "idade": 13,
+      "serie": "7 ano",
+      "turma": "7b"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 0,
+      "a4": 2,
+      "a5": 3,
+      "a6": 3,
+      "a7": 2,
+      "a8": 1,
+      "a9": 2,
+      "a10": 2,
+      "a11": "e quando fica criando coisa pra tudo daqui uns tempo n tem humanos mais",
+      "a12": "3"
+    }
+  },
+  {
+    "id": "0b33554b-cd4e-460d-a43a-d6eab1ad8670",
+    "enviadoEm": "2026-08-25T17:02:48.444Z",
+    "identificacao": {
+      "nome": "JOAO MIGUEL",
+      "idade": 14,
+      "serie": "9",
+      "turma": "ciclo2 tarde"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 1,
+      "a3": 2,
+      "a4": 3,
+      "a5": 2,
+      "a6": 3,
+      "a7": 3,
+      "a8": 3,
+      "a9": 0,
+      "a10": 0,
+      "a11": "LEGAL AGENTE APRENDE BASTANTE COISA",
+      "a12": "EU NAO USO MUITO CONPUTADOR  E NAO TENHO NOÇAO DISSO"
+    }
+  },
+  {
+    "id": "9b9d0f52-dec0-4bcc-a561-dc3422560e42",
+    "enviadoEm": "2026-08-25T17:04:31.450Z",
+    "identificacao": {
+      "nome": "Júlia Beatriz",
+      "idade": 13,
+      "serie": "8°",
+      "turma": "8A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 1,
+      "a9": 1,
+      "a10": 1,
+      "a11": "em minhas palavras compêtencia tecnológica é a capacidade de usar a tecnológia de forma consiente, eficiente e responsável não apenas sabendo mexer em uma ferramenta.",
+      "a12": "D7- porque eu uso de vez em quando muito a IA"
+    }
+  },
+  {
+    "id": "6e92c23e-b34d-4b7d-8acd-79cc368a437c",
+    "enviadoEm": "2026-08-25T17:05:55.293Z",
+    "identificacao": {
+      "nome": "vitor emanuel",
+      "idade": 13,
+      "serie": "7° ano",
+      "turma": "7°A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 1,
+      "a9": 1,
+      "a10": 3,
+      "a11": "olha, olhando para o que eu li do texto, como você diz não é sobre saber usar uma ferramenta por que para usar a ferramenta precisa especificamente de competência para saber o que esta sendo aprendido, avaliado e sendo empregado a aparecer a cada comando.",
+      "a12": "bom eu acho legal o uso da inteligência artificial no meu dia a dia como o chat gpt que nos ajuda a resolver problemas e perguntas e isso pra mim é uma boa solução prática."
+    }
+  },
+  {
+    "id": "48671c42-7ca3-4d23-bb5d-76d7d6ad1510",
+    "enviadoEm": "2026-08-25T17:07:36.710Z",
+    "identificacao": {
+      "nome": "juan guilherme silva martins",
+      "idade": 13,
+      "serie": "8",
+      "turma": "8a"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 2,
+      "a9": 3,
+      "a10": 1,
+      "a11": "Compétencia tecnologica é saber oque fazer e não fazer com oque tem.",
+      "a12": "Não lembro."
+    }
+  },
+  {
+    "id": "80c12cbb-80f2-4826-a323-fbd91d3f7801",
+    "enviadoEm": "2026-08-25T17:12:15.118Z",
+    "identificacao": {
+      "nome": "danil morais de mattos",
+      "idade": 12,
+      "serie": "6°C",
+      "turma": "C"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 1,
+      "a3": 2,
+      "a4": 3,
+      "a5": 1,
+      "a6": 2,
+      "a7": 3,
+      "a8": 3,
+      "a9": 2,
+      "a10": 3,
+      "a11": "nao sei",
+      "a12": "naosei"
+    }
+  },
+  {
+    "id": "c66594ae-e1de-4f0b-93ee-01be4ee6958e",
+    "enviadoEm": "2026-08-25T17:16:43.371Z",
+    "identificacao": {
+      "nome": "luiz guilherme arantes dos santos",
+      "idade": 14,
+      "serie": "8",
+      "turma": "8A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 3,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 0,
+      "a8": 2,
+      "a9": 0,
+      "a10": 0,
+      "a11": "",
+      "a12": ""
+    }
+  },
+  {
+    "id": "ddaa5a02-a258-4e57-ad76-cd6510b6f111",
+    "enviadoEm": "2026-08-25T17:55:05.169Z",
+    "identificacao": {
+      "nome": "vitor henrique da silva",
+      "idade": 12,
+      "serie": "6 ano",
+      "turma": "6a"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 1,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 1,
+      "a9": 1,
+      "a10": 3,
+      "a11": "se refare a ajuda de pessoas",
+      "a12": "n0 n1 n3 n5"
+    }
+  },
+  {
+    "id": "a4e54089-0188-4bb6-8696-9aec1f4a0656",
+    "enviadoEm": "2026-08-25T18:00:21.857Z",
+    "identificacao": {
+      "nome": "joão lucas alves bandeira",
+      "idade": 11,
+      "serie": "6 ano",
+      "turma": "6c"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 0,
+      "a9": 0,
+      "a10": 0,
+      "a11": "Em um mundo no qual tecnologia está presente na forma como aprendemos",
+      "a12": "Cultura e Cidadania Digital\n\nPensamento Computacional\n\nSistemas e Computação\n\nDados e Informação\n\nProdução e Criação Digital\n\nProgramação e Automação\n\nInteligência Artificial\n\nAplicação, Integração e Inovação\n\nSegurança e Bem-Estar Digital\n\nTecnologia, Sociedade e Ética"
+    }
+  },
+  {
+    "id": "8178115f-7f66-4d1f-91c2-841a8df5a2aa",
+    "enviadoEm": "2026-08-25T18:03:03.594Z",
+    "identificacao": {
+      "nome": "JASSON CORREA",
+      "idade": 12,
+      "serie": "6",
+      "turma": "B"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 1,
+      "a3": 3,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 0,
+      "a8": 0,
+      "a9": 1,
+      "a10": 0,
+      "a11": "BULLINYG",
+      "a12": "5DIMENCÕS"
+    }
+  },
+  {
+    "id": "e9889fd3-722d-463f-9086-f4740fb6185a",
+    "enviadoEm": "2026-08-25T18:03:54.979Z",
+    "identificacao": {
+      "nome": "marcos ryan caetano de oliveira",
+      "idade": 12,
+      "serie": "7a",
+      "turma": "1"
+    },
+    "respostas": {
+      "a1": 3,
+      "a2": 3,
+      "a3": 1,
+      "a4": 1,
+      "a5": 1,
+      "a6": 3,
+      "a7": 1,
+      "a8": 3,
+      "a9": 1,
+      "a10": 1,
+      "a11": "im",
+      "a12": "sei la"
+    }
+  },
+  {
+    "id": "7ec639d8-a3ff-43c2-8c0f-5f56a03d723f",
+    "enviadoEm": "2026-08-25T18:05:56.246Z",
+    "identificacao": {
+      "nome": "maria clara santos sousa",
+      "idade": 12,
+      "serie": "6º Ano",
+      "turma": "A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 3,
+      "a5": 2,
+      "a6": 0,
+      "a7": 3,
+      "a8": 0,
+      "a9": 2,
+      "a10": 1,
+      "a11": "é a tecnologia saber tudo que está na internet",
+      "a12": "D3 ela pode me ajudar á saber mais sobre tecnologia"
+    }
+  },
+  {
+    "id": "b35f2b5f-dde6-4bc8-88f3-15d45a6463ed",
+    "enviadoEm": "2026-08-25T18:07:47.406Z",
+    "identificacao": {
+      "nome": "nicolas daniel da silva martins",
+      "idade": 13,
+      "serie": "7 ano alpheu do miniqurti",
+      "turma": "1"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 1,
+      "a3": 0,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 3,
+      "a9": 1,
+      "a10": 0,
+      "a11": "sim",
+      "a12": "nao sei"
+    }
+  },
+  {
+    "id": "50697d87-c319-4cc7-9244-d9bf117e3cd9",
+    "enviadoEm": "2026-08-25T18:08:32.850Z",
+    "identificacao": {
+      "nome": "ingrid julia da silva amelda",
+      "idade": 12,
+      "serie": "7 a",
+      "turma": "7a"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 1,
+      "a3": 0,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 3,
+      "a9": 1,
+      "a10": 3,
+      "a11": "sim",
+      "a12": "nao sei"
+    }
+  },
+  {
+    "id": "1fbd1ac1-0aec-4086-b7ea-f03182e30aa9",
+    "enviadoEm": "2026-08-25T18:08:50.393Z",
+    "identificacao": {
+      "nome": "davy luccas santos alves",
+      "idade": 11,
+      "serie": "6 b",
+      "turma": "b"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 3,
+      "a5": 2,
+      "a6": 0,
+      "a7": 3,
+      "a8": 0,
+      "a9": 2,
+      "a10": 2,
+      "a11": "é a tecnologia saber tudo que está na internet",
+      "a12": "d4 explica saber mais sobre explicacão"
+    }
+  },
+  {
+    "id": "ca368392-8f24-44cb-8918-97c5d1c686e8",
+    "enviadoEm": "2026-08-25T18:09:12.314Z",
+    "identificacao": {
+      "nome": "LUIZ FELIPE LOPES",
+      "idade": 11,
+      "serie": "5 ANO",
+      "turma": "5 A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 0,
+      "a9": 0,
+      "a10": 0,
+      "a11": "Em um mundo no qual tecnologia está presente na forma como aprendemos, trabalhamos, criamos, nos comunicamos e tomamos decisões, saber utilizar ferramentas já não é suficiente.",
+      "a12": "NO MEU APRENDIZADO"
+    }
+  },
+  {
+    "id": "61bf703f-68c9-45fe-ad43-08ff95ae5bcb",
+    "enviadoEm": "2026-08-25T18:11:29.503Z",
+    "identificacao": {
+      "nome": "Isaque Daniel da silva",
+      "idade": 12,
+      "serie": "7 ano",
+      "turma": null
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 1,
+      "a3": 0,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 3,
+      "a9": 1,
+      "a10": 3,
+      "a11": "Para mim competencia tecnologica é quando alguém só passa na cabeça de que a internet é a única forma de saber como saber fazer alguma coisa na sabia.",
+      "a12": "não lembro direito"
+    }
+  },
+  {
+    "id": "c6eaef47-055d-4617-83ad-3fbe57bdee0f",
+    "enviadoEm": "2026-08-25T18:13:05.137Z",
+    "identificacao": {
+      "nome": "MATHEUS  MAXLEY",
+      "idade": 11,
+      "serie": "6",
+      "turma": "B"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 1,
+      "a3": 2,
+      "a4": 1,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 0,
+      "a9": 3,
+      "a10": 1,
+      "a11": "BULLING",
+      "a12": "5DIMENÕS"
+    }
+  },
+  {
+    "id": "1164b6c8-d277-4a4b-b386-31aa9e61fede",
+    "enviadoEm": "2026-08-25T18:41:32.030Z",
+    "identificacao": {
+      "nome": "Carlos Eduardo Pereira",
+      "idade": 15,
+      "serie": "1b",
+      "turma": "1b"
+    },
+    "respostas": {
+      "a1": 2,
+      "a2": 1,
+      "a3": 1,
+      "a4": 1,
+      "a5": 1,
+      "a6": 1,
+      "a7": 0,
+      "a8": 3,
+      "a9": 2,
+      "a10": 1,
+      "a11": "",
+      "a12": ""
+    }
+  },
+  {
+    "id": "79ac67b1-0eeb-428e-bd12-aabc644f0935",
+    "enviadoEm": "2026-08-25T18:42:19.934Z",
+    "identificacao": {
+      "nome": "milena roiz da silva",
+      "idade": 15,
+      "serie": "9 ano",
+      "turma": "b"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 0,
+      "a9": 0,
+      "a10": 1,
+      "a11": "é a capacidade de usar ferramentas, sistemas e recursos digitais de forma eficaz, crítica e segura para resolver problemas e realizar tarefas.",
+      "a12": "iteligencia artificial\nme ajudar a estudar e fazer varias coisas"
+    }
+  },
+  {
+    "id": "8a4afa1a-4aae-4d93-a06f-9be4053d2247",
+    "enviadoEm": "2026-08-25T18:43:25.848Z",
+    "identificacao": {
+      "nome": "danilo junio da silva olivera",
+      "idade": 16,
+      "serie": "1 ano do ensino mèdio",
+      "turma": "1a"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 2,
+      "a3": 3,
+      "a4": 2,
+      "a5": 2,
+      "a6": 1,
+      "a7": 0,
+      "a8": 1,
+      "a9": 3,
+      "a10": 0,
+      "a11": "não sei",
+      "a12": "sim"
+    }
+  },
+  {
+    "id": "e8492cf7-79d0-4fbe-a580-3c90f8fffc1b",
+    "enviadoEm": "2026-08-25T18:43:54.135Z",
+    "identificacao": {
+      "nome": "Fernando luiz ricci da silva",
+      "idade": 17,
+      "serie": "1º do ensino medio",
+      "turma": "1b"
+    },
+    "respostas": {
+      "a1": 0,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 2,
+      "a6": 2,
+      "a7": 2,
+      "a8": 3,
+      "a9": 3,
+      "a10": 2,
+      "a11": "nao sei",
+      "a12": "infelizmente eu nao sei"
+    }
+  },
+  {
+    "id": "c85d3138-fd71-48be-8d5f-93b42b57e74f",
+    "enviadoEm": "2026-08-25T18:44:24.478Z",
+    "identificacao": {
+      "nome": "hester gomes da silveira",
+      "idade": 15,
+      "serie": "9º",
+      "turma": "9A"
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 1,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 2,
+      "a9": 1,
+      "a10": 1,
+      "a11": "",
+      "a12": ""
+    }
+  },
+  {
+    "id": "ba97ad6c-e2c6-441b-a6ab-f0ff54146d6c",
+    "enviadoEm": "2026-08-25T18:44:33.135Z",
+    "identificacao": {
+      "nome": "marilia jamile",
+      "idade": 11,
+      "serie": "9 ano fundamental e 2 EM",
+      "turma": null
+    },
+    "respostas": {
+      "a1": 1,
+      "a2": 2,
+      "a3": 1,
+      "a4": 2,
+      "a5": 3,
+      "a6": 2,
+      "a7": 2,
+      "a8": 2,
+      "a9": 1,
+      "a10": 1,
+      "a11": "t",
+      "a12": "t"
+    }
+  }
+]

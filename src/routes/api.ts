@@ -1,0 +1,277 @@
+import { Router, Request, Response } from "express";
+import path from "path";
+import { randomUUID } from "crypto";
+import { readJson, appendToJsonArray } from "../utils/jsonStore";
+import {
+  clearProfessorSession,
+  createProfessorSession,
+  isProfessorPasswordValid,
+  professorPasswordIsConfigured,
+  requireProfessor,
+} from "../utils/professorAuth";
+
+const DATA_DIR = path.join(__dirname, "..", "..", "data");
+
+const FORMS = {
+  avaliacao: {
+    questoes: path.join(DATA_DIR, "avaliacao", "questions-avaliacao.json"),
+    respostas: path.join(DATA_DIR, "avaliacao", "responses-avaliacao.json"),
+  },
+  pesquisa: {
+    questoes: path.join(DATA_DIR, "pesquisa", "questions-pesquisa.json"),
+    respostas: path.join(DATA_DIR, "pesquisa", "responses-pesquisa.json"),
+  },
+  modelo: {
+    questoes: path.join(DATA_DIR, "modelo", "questions-modelo.json"),
+    respostas: path.join(DATA_DIR, "modelo", "responses-modelo.json"),
+  },
+} as const;
+
+type FormKey = keyof typeof FORMS;
+
+function isFormKey(value: string): value is FormKey {
+  return value === "avaliacao" || value === "pesquisa" || value === "modelo";
+}
+
+export const apiRouter = Router();
+
+type JsonObject = Record<string, unknown>;
+
+function isObject(value: unknown): value is JsonObject {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function validateFormData(questionsData: unknown, responsesData: unknown) {
+  const errors: string[] = [];
+  const questions = isObject(questionsData) && Array.isArray(questionsData.questoes)
+    ? questionsData.questoes
+    : [];
+  const responses = Array.isArray(responsesData) ? responsesData : [];
+  const questionIds = new Set<string>();
+  const questionMap = new Map<string, JsonObject>();
+
+  if (!isObject(questionsData)) errors.push("questions: o arquivo deve conter um objeto.");
+  if (!Array.isArray(responsesData)) errors.push("responses: o arquivo deve conter um array.");
+  if (questions.length === 0) errors.push("questions: a propriedade questoes está vazia ou ausente.");
+
+  questions.forEach((question, index) => {
+    if (!isObject(question)) {
+      errors.push(`questions[${index}]: questão inválida.`);
+      return;
+    }
+    const id = question.id;
+    if (typeof id !== "string" || !id.trim()) {
+      errors.push(`questions[${index}]: id ausente.`);
+      return;
+    }
+    if (questionIds.has(id)) errors.push(`questions: id duplicado '${id}'.`);
+    questionIds.add(id);
+    questionMap.set(id, question);
+    if (typeof question.pergunta !== "string" || !question.pergunta.trim()) {
+      errors.push(`questions[${index}]: pergunta ausente.`);
+    }
+    if (question.tipo === "multipla_escolha") {
+      if (!Array.isArray(question.opcoes) || question.opcoes.length === 0) {
+        errors.push(`questions[${index}]: opções ausentes.`);
+      }
+      if (typeof question.resposta_correta !== "number" ||
+          !Number.isInteger(question.resposta_correta) ||
+          question.resposta_correta < 0 ||
+          question.resposta_correta >= (Array.isArray(question.opcoes) ? question.opcoes.length : 0)) {
+        errors.push(`questions[${index}]: resposta_correta inválida.`);
+      }
+    } else if (question.tipo !== "likert" && question.tipo !== "aberta") {
+      errors.push(`questions[${index}]: tipo '${String(question.tipo)}' desconhecido.`);
+    }
+  });
+
+  const validResponses: JsonObject[] = [];
+  responses.forEach((response, index) => {
+    if (!isObject(response)) {
+      errors.push(`responses[${index}]: envio inválido.`);
+      return;
+    }
+    if (typeof response.id !== "string" || !response.id) errors.push(`responses[${index}]: id ausente.`);
+    if (typeof response.enviadoEm !== "string" || Number.isNaN(Date.parse(response.enviadoEm))) {
+      errors.push(`responses[${index}]: enviadoEm inválido.`);
+    }
+    if (!isObject(response.identificacao) || typeof response.identificacao.nome !== "string" ||
+        !response.identificacao.nome.trim()) {
+      errors.push(`responses[${index}]: identificação/nome inválidos.`);
+    }
+    if (!isObject(response.respostas)) {
+      errors.push(`responses[${index}]: respostas devem ser um objeto.`);
+      return;
+    }
+
+    let acertos = 0;
+    let corrigiveis = 0;
+    Object.entries(response.respostas).forEach(([questionId, answer]) => {
+      const question = questionMap.get(questionId);
+      if (!question) {
+        errors.push(`responses[${index}]: questão desconhecida '${questionId}'.`);
+        return;
+      }
+      if (question.tipo === "multipla_escolha") {
+        corrigiveis += 1;
+        if (typeof answer !== "number" || !Number.isInteger(answer) ||
+            answer < 0 || answer >= (Array.isArray(question.opcoes) ? question.opcoes.length : 0)) {
+          errors.push(`responses[${index}].${questionId}: opção inválida.`);
+        } else if (answer === question.resposta_correta) {
+          acertos += 1;
+        }
+      } else if (question.tipo === "likert") {
+        const scale = isObject(questionsData) && isObject(questionsData.escala)
+          ? questionsData.escala
+          : undefined;
+        const min = typeof scale?.min === "number" ? scale.min : 1;
+        const max = typeof scale?.max === "number" ? scale.max : 5;
+        if (typeof answer !== "number" || !Number.isInteger(answer) || answer < min || answer > max) {
+          errors.push(`responses[${index}].${questionId}: valor Likert inválido.`);
+        }
+      } else if (typeof answer !== "string") {
+        errors.push(`responses[${index}].${questionId}: resposta aberta inválida.`);
+      }
+    });
+    validResponses.push({ ...response, resultado: { acertos, corrigiveis } });
+  });
+
+  const dimensions = new Map<string, { total: number; count: number }>();
+  validResponses.forEach((response) => {
+    const answers = isObject(response.respostas) ? response.respostas : {};
+    questions.forEach((question) => {
+      if (!isObject(question) || question.tipo !== "likert" || typeof question.id !== "string") return;
+      const answer = answers[question.id];
+      if (typeof answer !== "number") return;
+      const dimension = typeof question.dimensao === "string" ? question.dimensao : "Sem dimensão";
+      const current = dimensions.get(dimension) ?? { total: 0, count: 0 };
+      current.total += answer;
+      current.count += 1;
+      dimensions.set(dimension, current);
+    });
+  });
+
+  return {
+    valido: errors.length === 0,
+    erros: errors,
+    totalQuestoes: questions.length,
+    totalRespostas: responses.length,
+    questoes: questions,
+    respostas: validResponses,
+    resumo: Array.from(dimensions, ([dimensao, value]) => ({
+      dimensao,
+      media: Number((value.total / value.count).toFixed(2)),
+      respostas: value.count,
+    })),
+  };
+}
+
+apiRouter.post("/professor/login", (req: Request, res: Response) => {
+  if (!professorPasswordIsConfigured()) {
+    return res.status(503).json({ erro: "Configure PROFESSOR_PASSWORD no arquivo .env." });
+  }
+  if (!isProfessorPasswordValid(req.body?.senha)) {
+    return res.status(401).json({ erro: "Senha inválida." });
+  }
+  createProfessorSession(res);
+  res.json({ ok: true });
+});
+
+apiRouter.get("/professor/login", (_req: Request, res: Response) => {
+  res.status(405).json({ erro: "Use POST /api/professor/login enviando { senha }." });
+});
+
+apiRouter.post("/professor/logout", (req: Request, res: Response) => {
+  clearProfessorSession(req, res);
+  res.json({ ok: true });
+});
+
+apiRouter.get("/professor/status", requireProfessor, (_req: Request, res: Response) => {
+  res.json({ autenticado: true });
+});
+
+apiRouter.get("/professor/respostas/:form", requireProfessor, async (req: Request, res: Response) => {
+  const { form } = req.params;
+  if (typeof form !== "string" || !isFormKey(form)) {
+    return res.status(404).json({ erro: "Formulário não encontrado." });
+  }
+  try {
+    const [questions, responses] = await Promise.all([
+      readJson(FORMS[form].questoes, null),
+      readJson(FORMS[form].respostas, []),
+    ]);
+    res.json({ form, ...validateFormData(questions, responses) });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: "Erro ao validar os arquivos do formulário." });
+  }
+});
+
+// GET /api/questions/:form  -> devolve o JSON de perguntas do formulário
+apiRouter.get("/questions/:form", async (req: Request, res: Response) => {
+  const { form } = req.params;
+  if (typeof form !== "string" || !isFormKey(form)) {
+    return res.status(404).json({ erro: "Formulário não encontrado." });
+  }
+  try {
+    const questoes = await readJson<JsonObject | null>(FORMS[form].questoes, null);
+    if (!questoes) {
+      return res.status(404).json({ erro: "Perguntas não encontradas." });
+    }
+    if (isObject(questoes) && Array.isArray(questoes.questoes)) {
+      res.json({
+        ...questoes,
+        questoes: questoes.questoes.map((questao) => {
+          if (!isObject(questao)) return questao;
+          const { resposta_correta: _respostaCorreta, ...questaoPublica } = questao;
+          return questaoPublica;
+        }),
+      });
+      return;
+    }
+    res.json(questoes);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: "Erro ao carregar as perguntas." });
+  }
+});
+
+// POST /api/respostas/:form -> grava uma resposta no arquivo JSON correspondente
+apiRouter.post("/respostas/:form", async (req: Request, res: Response) => {
+  const { form } = req.params;
+  if (typeof form !== "string" || !isFormKey(form)) {
+    return res.status(404).json({ erro: "Formulário não encontrado." });
+  }
+
+  const { identificacao, respostas } = req.body ?? {};
+
+  if (!identificacao || typeof identificacao !== "object") {
+    return res.status(400).json({ erro: "Dados de identificação ausentes." });
+  }
+  if (!identificacao.nome || String(identificacao.nome).trim() === "") {
+    return res.status(400).json({ erro: "Nome é obrigatório." });
+  }
+  if (!respostas || typeof respostas !== "object") {
+    return res.status(400).json({ erro: "Respostas ausentes." });
+  }
+
+  const entrada = {
+    id: randomUUID(),
+    enviadoEm: new Date().toISOString(),
+    identificacao: {
+      nome: String(identificacao.nome).trim(),
+      idade: identificacao.idade ?? null,
+      serie: identificacao.serie ?? null,
+      turma: identificacao.turma ?? null,
+    },
+    respostas,
+  };
+
+  try {
+    await appendToJsonArray(FORMS[form].respostas, entrada);
+    res.status(201).json({ ok: true, id: entrada.id });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: "Erro ao salvar a resposta." });
+  }
+});
