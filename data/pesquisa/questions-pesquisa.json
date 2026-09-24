@@ -1,0 +1,38 @@
+{
+  "titulo": "Pesquisa de Conhecimentos Técnicos",
+  "descricao": "Este formulário ajuda a mapear as competências tecnológicas que você já possui, organizadas conforme as 10 dimensões do framework TECH. Responda com sinceridade — não há respostas certas ou erradas.",
+  "escala": {
+    "tipo": "likert",
+    "min": 1,
+    "max": 5,
+    "rotulos": {
+      "1": "Nunca fiz / não sei",
+      "2": "Já tentei, com dificuldade",
+      "3": "Consigo fazer com ajuda",
+      "4": "Consigo fazer sozinho(a)",
+      "5": "Consigo fazer e ensinar outra pessoa"
+    }
+  },
+  "questoes": [
+    { "id": "p1", "dimensao": "D1 — Cultura e Cidadania Digital", "tipo": "likert", "pergunta": "Eu sei operar dispositivos digitais (computador, celular, tablet) com autonomia." },
+    { "id": "p2", "dimensao": "D1 — Cultura e Cidadania Digital", "tipo": "likert", "pergunta": "Eu sei me comunicar e colaborar com outras pessoas usando ferramentas digitais (e-mail, chats, videochamadas)." },
+    { "id": "p3", "dimensao": "D2 — Pensamento Computacional", "tipo": "likert", "pergunta": "Eu consigo dividir um problema complexo em partes menores para resolvê-lo." },
+    { "id": "p4", "dimensao": "D2 — Pensamento Computacional", "tipo": "likert", "pergunta": "Eu consigo descrever uma sequência de passos (algoritmo) para resolver uma tarefa." },
+    { "id": "p5", "dimensao": "D3 — Sistemas e Computação", "tipo": "likert", "pergunta": "Eu entendo o que são hardware, software e como um computador funciona por dentro." },
+    { "id": "p6", "dimensao": "D3 — Sistemas e Computação", "tipo": "likert", "pergunta": "Eu entendo como redes e a internet funcionam (conexão, servidores, IP, wi-fi)." },
+    { "id": "p7", "dimensao": "D4 — Dados e Informação", "tipo": "likert", "pergunta": "Eu sei organizar dados em tabelas e representá-los em gráficos." },
+    { "id": "p8", "dimensao": "D4 — Dados e Informação", "tipo": "likert", "pergunta": "Eu consigo analisar dados e usá-los para tomar uma decisão." },
+    { "id": "p9", "dimensao": "D5 — Produção e Criação Digital", "tipo": "likert", "pergunta": "Eu sei produzir documentos, apresentações ou conteúdos visuais digitais." },
+    { "id": "p10", "dimensao": "D5 — Produção e Criação Digital", "tipo": "likert", "pergunta": "Eu sei editar e publicar conteúdo audiovisual (imagem, áudio ou vídeo)." },
+    { "id": "p11", "dimensao": "D6 — Programação e Automação", "tipo": "likert", "pergunta": "Eu já escrevi algum código de programação (em qualquer linguagem)." },
+    { "id": "p12", "dimensao": "D6 — Programação e Automação", "tipo": "likert", "pergunta": "Eu sei encontrar e corrigir um erro em um programa ou automação simples." },
+    { "id": "p13", "dimensao": "D7 — Inteligência Artificial", "tipo": "likert", "pergunta": "Eu sei usar ferramentas de inteligência artificial (como ChatGPT) para estudar ou produzir algo." },
+    { "id": "p14", "dimensao": "D7 — Inteligência Artificial", "tipo": "likert", "pergunta": "Eu consigo avaliar criticamente se uma resposta gerada por IA está correta ou confiável." },
+    { "id": "p15", "dimensao": "D8 — Segurança e Bem-Estar Digital", "tipo": "likert", "pergunta": "Eu sei proteger minhas senhas, dados e privacidade online." },
+    { "id": "p16", "dimensao": "D8 — Segurança e Bem-Estar Digital", "tipo": "likert", "pergunta": "Eu sei reconhecer ameaças digitais (golpes, phishing, notícias falsas) e agir com cautela." },
+    { "id": "p17", "dimensao": "D9 — Tecnologia, Sociedade e Ética", "tipo": "likert", "pergunta": "Eu consigo refletir sobre os impactos éticos e sociais do uso da tecnologia." },
+    { "id": "p18", "dimensao": "D10 — Aplicação, Integração e Inovação", "tipo": "likert", "pergunta": "Eu já usei tecnologia para resolver um problema real do meu dia a dia, escola ou trabalho." },
+    { "id": "p19", "dimensao": "D10 — Aplicação, Integração e Inovação", "tipo": "likert", "pergunta": "Eu me sinto capaz de combinar diferentes ferramentas/tecnologias para criar algo novo." },
+    { "id": "p20", "dimensao": "Geral", "tipo": "aberta", "pergunta": "Qual área de tecnologia mais desperta seu interesse hoje (ex: programação, design, dados, IA, jogos, redes)? Por quê?" }
+  ]
+}

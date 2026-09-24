@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pesquisa — TECH</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="brand">TE<span>CH</span></div>
+  <div class="links">
+    <a href="/index.html">Início</a>
+    <a href="/avaliacao/">Avaliação</a>
+    <a href="/pesquisa/" class="active">Pesquisa</a>
+  </div>
+</nav>
+
+<main>
+  <div class="form-header">
+    <h1 id="titulo-form">Pesquisa</h1>
+    <p id="descricao-form">Carregando...</p>
+  </div>
+
+  <div class="progress-bar"><div id="progress"></div></div>
+
+  <div id="alerta"></div>
+
+  <form id="form-pesquisa">
+    <fieldset>
+      <legend>Identificação</legend>
+      <div class="field">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idade" min="1" max="120" />
+      </div>
+      <div class="field">
+        <label for="serie">Série / Ano escolar</label>
+        <input type="text" id="serie" name="serie" placeholder="Ex: 8º ano, 2º ano EM..." />
+      </div>
+      <div class="field">
+        <label for="turma">Turma (opcional)</label>
+        <input type="text" id="turma" name="turma" placeholder="Ex: 8A" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Autoavaliação de conhecimentos técnicos</legend>
+      <div id="questoes-container"></div>
+    </fieldset>
+
+    <div class="submit-row">
+      <button type="submit" class="btn btn-primary" id="btn-enviar">Enviar pesquisa</button>
+    </div>
+  </form>
+</main>
+
+<footer>TECH — Technological Competency for Humans</footer>
+
+<script src="/js/form-common.js"></script>
+<script src="/pesquisa/pesquisa.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "tech-app",
+  "version": "1.0.0",
+  "description": "Aplicação Node.js + TypeScript + Express para apresentar o framework **TECH —\r Technological Competency for Humans** e coletar respostas de dois formulários,\r pensada para rodar no computador do professor e ser acessada pelos alunos na\r mesma rede local (Wi-Fi da sala).",
+  "license": "ISC",
+  "author": "Cris Campos",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --watch public --watch data/questions-avaliacao.json --watch data/questions-pesquisa.json --ext ts,html,css,js,json --exec ts-node src/server.ts",
+    "debug": "nodemon --inspect=9229 --watch src --watch public --watch data/questions-avaliacao.json --watch data/questions-pesquisa.json --ext ts,html,css,js,json --exec ts-node src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.0"
+  }
+}

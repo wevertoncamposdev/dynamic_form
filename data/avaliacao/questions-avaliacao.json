@@ -1,0 +1,121 @@
+{
+  "titulo": "Avaliação — Compreensão do Framework TECH",
+  "descricao": "Este formulário verifica o quanto você compreendeu sobre o framework TECH (Technological Competency for Humans) apresentado na página inicial.",
+  "questoes": [
+    {
+      "id": "a1",
+      "tipo": "multipla_escolha",
+      "pergunta": "O que significa a sigla TECH?",
+      "opcoes": [
+        "Technology for Everyone's Complete Habilitation",
+        "Technological Competency for Humans",
+        "Technical Course for Higher-education",
+        "Total Education in Computing and Hardware"
+      ],
+      "resposta_correta": 1
+    },
+    {
+      "id": "a2",
+      "tipo": "multipla_escolha",
+      "pergunta": "Segundo o TECH, qual é a principal diferença entre 'ferramenta' e 'competência'?",
+      "opcoes": [
+        "Não existe diferença, são sinônimos",
+        "Ferramenta é o objetivo final; competência é apenas o meio",
+        "Ferramentas são meios que podem mudar; competências são o objetivo, o que permanece",
+        "Competência é aprender a usar um único programa específico"
+      ],
+      "resposta_correta": 2
+    },
+    {
+      "id": "a3",
+      "tipo": "multipla_escolha",
+      "pergunta": "Qual é a tese central do TECH sobre tecnologia e competência humana?",
+      "opcoes": [
+        "Quanto mais poderosa a tecnologia, menos importante é o ser humano",
+        "Quanto mais poderosa a tecnologia se torna, maior a necessidade de seres humanos tecnologicamente competentes",
+        "A tecnologia deve substituir o ensino tradicional por completo",
+        "Somente especialistas em TI precisam de competência tecnológica"
+      ],
+      "resposta_correta": 1
+    },
+    {
+      "id": "a4",
+      "tipo": "multipla_escolha",
+      "pergunta": "Quantos níveis de progressão de competência o TECH define?",
+      "opcoes": ["4 níveis", "5 níveis", "6 níveis (N0 a N5)", "10 níveis"],
+      "resposta_correta": 2
+    },
+    {
+      "id": "a5",
+      "tipo": "multipla_escolha",
+      "pergunta": "Qual nível representa o momento em que a pessoa passa de 'usuária' para 'produtora', criando soluções próprias?",
+      "opcoes": ["N0 — Explorar", "N1 — Utilizar", "N3 — Criar", "N5 — Transformar"],
+      "resposta_correta": 2
+    },
+    {
+      "id": "a6",
+      "tipo": "multipla_escolha",
+      "pergunta": "No nível N4 — Integrar, o que a pessoa é capaz de fazer?",
+      "opcoes": [
+        "Apenas seguir instruções passo a passo",
+        "Explorar uma tecnologia pela primeira vez",
+        "Combinar diferentes competências e tecnologias para resolver problemas mais complexos",
+        "Memorizar comandos de um único programa"
+      ],
+      "resposta_correta": 2
+    },
+    {
+      "id": "a7",
+      "tipo": "multipla_escolha",
+      "pergunta": "Quantas dimensões de competência (D1 a D10) compõem a Taxonomia do TECH?",
+      "opcoes": ["5 dimensões", "8 dimensões", "10 dimensões", "12 dimensões"],
+      "resposta_correta": 2
+    },
+    {
+      "id": "a8",
+      "tipo": "multipla_escolha",
+      "pergunta": "A dimensão D7 do TECH é dedicada especificamente a:",
+      "opcoes": [
+        "Segurança e Bem-Estar Digital",
+        "Inteligência Artificial",
+        "Programação e Automação",
+        "Dados e Informação"
+      ],
+      "resposta_correta": 1
+    },
+    {
+      "id": "a9",
+      "tipo": "multipla_escolha",
+      "pergunta": "Qual dimensão trata de coletar, organizar, analisar e interpretar dados para apoiar decisões?",
+      "opcoes": [
+        "D3 — Sistemas e Computação",
+        "D4 — Dados e Informação",
+        "D9 — Tecnologia, Sociedade e Ética",
+        "D2 — Pensamento Computacional"
+      ],
+      "resposta_correta": 1
+    },
+    {
+      "id": "a10",
+      "tipo": "multipla_escolha",
+      "pergunta": "Segundo o TECH, 'nível de competência' é equivalente a idade?",
+      "opcoes": [
+        "Sim, cada idade corresponde exatamente a um nível",
+        "Não — nível de competência não é equivalente à idade",
+        "Apenas para crianças até 10 anos",
+        "Sim, mas somente na fase de alfabetização digital"
+      ],
+      "resposta_correta": 1
+    },
+    {
+      "id": "a11",
+      "tipo": "aberta",
+      "pergunta": "Em suas palavras, o que é 'competência tecnológica' segundo o TECH? (não é apenas saber usar uma ferramenta)"
+    },
+    {
+      "id": "a12",
+      "tipo": "aberta",
+      "pergunta": "Cite uma das 10 dimensões da Taxonomia do TECH e dê um exemplo prático dela na sua vida."
+    }
+  ]
+}
